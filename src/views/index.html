@@ -1,0 +1,37 @@
+<h2>Images</h2>
+
+<form action="/upload" method="POST" enctype="multipart/form-data">
+    <label for="file">
+        Upload new image
+    </label>
+    <input
+        type="file"
+        id="file"
+        name="file"
+        accept="image/png, image/jpeg"
+    />
+    <input type="submit" />
+</form>
+<table>
+    <tr>
+        <th>Filename</th>
+        <th>Thumbnail</th>
+    </tr>
+    {% for image in images %}
+    <tr>
+        <td>{{ image.filename }}</td>
+        <td>
+            <img
+                src="{{ image.url }}"
+                width="200px"
+            />
+        </td>
+    </tr>
+    {% else %}
+    <tr>
+        <td colspan="2">
+            No Images with the extension '.jpg', '.jpeg' or '.png' were found.
+        </td>
+    </tr>
+    {% endfor %}
+</table>

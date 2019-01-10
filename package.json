@@ -1,0 +1,29 @@
+{
+  "name": "node-s3-demo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "$(npm bin)/ts-node src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/koa": "^2.0.48",
+    "@types/koa-router": "^7.0.37",
+    "@types/koa-views": "^2.0.3",
+    "@types/uuid": "^3.4.4",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.385.0",
+    "koa": "^2.6.2",
+    "koa-body": "^4.0.6",
+    "koa-router": "^7.4.0",
+    "koa-views": "^6.1.5",
+    "twig": "^1.12.0",
+    "uuid": "^3.3.2"
+  }
+}
